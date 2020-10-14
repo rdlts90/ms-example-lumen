@@ -18,7 +18,7 @@ class ClientRequest extends BaseRequest
        //executar a validacao
         $rule = [
             'name' => 'required|max:50',
-            'email' => 'required|unique:clients|max:50',
+            'email' => 'required|unique:client|max:50',
             'cpf' => 'required|numeric|digits:11',
             'cep' => 'required|numeric|digits:8',
         ];
@@ -41,7 +41,7 @@ class ClientRequest extends BaseRequest
     {
         $rule = [
             'name' => 'max:50',
-            'email' => 'unique:clients|max:50',
+            'email' => 'unique:client|max:50',
             'cpf' => 'numeric|max:11',
             'cep' => 'numeric|max:8',
         ];
