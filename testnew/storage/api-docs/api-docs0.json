@@ -1,0 +1,195 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Serviços de ???",
+        "description": "<ul><li>Disponibilizado para uso unico e exclusivo da empresa RaiaDrogasil S.A.</li><li>Utilize a busca para filtrar por versões. Ex: <b>http://site.com.br/docs?version=1</b> ou <b>http://site.com.br/docs?version=2</b></li></ul>",
+        "version": "v0"
+    },
+    "paths": {
+        "/api/v0/clients": {
+            "get": {
+                "tags": [
+                    "Client v0"
+                ],
+                "summary": "Listar todos os registros",
+                "description": "Retorna multiplos registros assim como uma paginação",
+                "operationId": "client_all",
+                "responses": {
+                    "200": {
+                        "description": "Sucesso na operação"
+                    },
+                    "400": {
+                        "description": "Valor inválido na operação"
+                    },
+                    "404": {
+                        "description": "Registro não encotrado"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Client v0"
+                ],
+                "summary": "Incluir um registro",
+                "operationId": "client_add",
+                "requestBody": {
+                    "description": "Dados de entrada",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "exemplo_nome": {
+                                        "description": "Nome do parametro (label)",
+                                        "type": "string"
+                                    },
+                                    "exemplo_identificador": {
+                                        "description": "Nome de identificador do parametro (valor único)",
+                                        "type": "string"
+                                    },
+                                    "exemplo_idLoja": {
+                                        "description": "Id da loja",
+                                        "type": "integer"
+                                    },
+                                    "valor": {
+                                        "description": "Valor da configuração",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Sucesso na operação"
+                    },
+                    "422": {
+                        "description": "Dados inválidos na requisição"
+                    },
+                    "400": {
+                        "description": "Valor inválido na operação"
+                    }
+                }
+            }
+        },
+        "/api/v0/clients/{id}": {
+            "get": {
+                "tags": [
+                    "Client v0"
+                ],
+                "summary": "Recuperar um registro pelo ID",
+                "description": "Retona apenas um registro",
+                "operationId": "client_get",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID do registro a ser buscado",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Sucesso na operação"
+                    },
+                    "400": {
+                        "description": "Valor inválido na operação"
+                    },
+                    "404": {
+                        "description": "Registro não encontrado"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Client v0"
+                ],
+                "summary": "Atualizar um registro existente",
+                "operationId": "client_update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID do registro a ser atualizado",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "Dados de entrada",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "exemplo_idLoja": {
+                                        "description": "Id da loja",
+                                        "type": "integer"
+                                    },
+                                    "exemplo_valor": {
+                                        "description": "Valor da configuração",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Sucesso na operação"
+                    },
+                    "400": {
+                        "description": "Valor inválido na operação"
+                    },
+                    "404": {
+                        "description": "Registro não encontrado"
+                    },
+                    "422": {
+                        "description": "Dados inválidos na requisição"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Client v0"
+                ],
+                "summary": "Remover um registro",
+                "operationId": "client_remove",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID do registro a ser removido",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Sucesso na operação"
+                    },
+                    "400": {
+                        "description": "Valor inválido na operação"
+                    },
+                    "404": {
+                        "description": "Registro não encontrado"
+                    }
+                }
+            }
+        }
+    }
+}
