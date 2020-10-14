@@ -41,7 +41,7 @@ class ClientRequest extends BaseRequest
     {
         $rule = [
             'name' => 'max:50',
-            'email' => 'max:50',
+            'email' => 'unique|max:50',
             'cpf' => 'numeric|max:11',
             'cep' => 'numeric|max:8',
         ];
