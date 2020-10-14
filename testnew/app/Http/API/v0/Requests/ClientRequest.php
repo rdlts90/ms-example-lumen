@@ -18,7 +18,7 @@ class ClientRequest extends BaseRequest
        //executar a validacao
         $rule = [
             'name' => 'required|max:50',
-            'email' => 'required|max:50',
+            'email' => 'required|unique|max:50',
             'cpf' => 'required|numeric|digits:11',
             'cep' => 'required|numeric|digits:8',
         ];
@@ -40,10 +40,10 @@ class ClientRequest extends BaseRequest
     public function validateUpdate()
     {
         $rule = [
-            'name' => 'required|max:50',
-            'email' => 'required|max:50',
-            'cpf' => 'required|numeric|max:11',
-            'cep' => 'required|numeric|max:8',
+            'name' => 'max:50',
+            'email' => 'max:50',
+            'cpf' => 'numeric|max:11',
+            'cep' => 'numeric|max:8',
         ];
         $requestResource = $this->validateArr($rule, true);
 
