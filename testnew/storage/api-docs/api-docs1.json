@@ -1,7 +1,7 @@
 {
     "openapi": "3.0.0",
     "info": {
-        "title": "Serviços de ???",
+        "title": "Serviços de Ramon",
         "description": "<ul><li>Disponibilizado para uso unico e exclusivo da empresa RaiaDrogasil S.A.</li><li>Utilize a busca para filtrar por versões. Ex: <b>http://site.com.br/docs?version=1</b> ou <b>http://site.com.br/docs?version=2</b></li></ul>",
         "version": "v1"
     },
@@ -1992,6 +1992,199 @@
                                 }
                             }
                         }
+                    }
+                }
+            }
+        },
+        "/api/v1/customers/{id}": {
+            "get": {
+                "tags": [
+                    "Customer v1"
+                ],
+                "summary": "Recuperar um registro pelo ID",
+                "description": "Retona apenas um registro",
+                "operationId": "customer_get",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID do registro a ser buscado",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Sucesso na operação"
+                    },
+                    "400": {
+                        "description": "Valor inválido na operação"
+                    },
+                    "404": {
+                        "description": "Registro não encontrado"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Customer v1"
+                ],
+                "summary": "Atualizar um registro existente",
+                "operationId": "customer_update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID do registro a ser atualizado",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "Dados de entrada",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "description": "Nome do cliente",
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "description": "Email do cliente",
+                                        "type": "string"
+                                    },
+                                    "cpf": {
+                                        "description": "CPF do cliente",
+                                        "type": "integer"
+                                    },
+                                    "cep": {
+                                        "description": "CEP do cliente",
+                                        "type": "integer"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Sucesso na operação"
+                    },
+                    "400": {
+                        "description": "Valor inválido na operação"
+                    },
+                    "404": {
+                        "description": "Registro não encontrado"
+                    },
+                    "422": {
+                        "description": "Dados inválidos na requisição"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Customer v1"
+                ],
+                "summary": "Remover um registro",
+                "operationId": "customer_remove",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID do registro a ser removido",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Sucesso na operação"
+                    },
+                    "400": {
+                        "description": "Valor inválido na operação"
+                    },
+                    "404": {
+                        "description": "Registro não encontrado"
+                    }
+                }
+            }
+        },
+        "/api/v1/customers": {
+            "get": {
+                "tags": [
+                    "Customer v1"
+                ],
+                "summary": "Listar todos os registros",
+                "description": "Retorna multiplos registros assim como uma paginação",
+                "operationId": "customer_all",
+                "responses": {
+                    "200": {
+                        "description": "Sucesso na operação"
+                    },
+                    "400": {
+                        "description": "Valor inválido na operação"
+                    },
+                    "404": {
+                        "description": "Registro não encotrado"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Customer v1"
+                ],
+                "summary": "Incluir um registro",
+                "operationId": "customer_add",
+                "requestBody": {
+                    "description": "Dados de entrada",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "description": "Nome do cliente",
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "description": "Email do Cliente",
+                                        "type": "string"
+                                    },
+                                    "cpf": {
+                                        "description": "CPF do Cliente",
+                                        "type": "integer"
+                                    },
+                                    "cep": {
+                                        "description": "CEP do Cliente",
+                                        "type": "integer"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Sucesso na operação"
+                    },
+                    "422": {
+                        "description": "Dados inválidos na requisição"
+                    },
+                    "400": {
+                        "description": "Valor inválido na operação"
                     }
                 }
             }

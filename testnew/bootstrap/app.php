@@ -108,15 +108,4 @@ $app->router->group([
     require __DIR__.'/../routes/api_v1.php';
 });
 
-
-$app->router->group([
-    'namespace' => 'App\Http\API\v0\Controllers',
-], function ($router) {
-    require __DIR__.'/../routes/api_v0.php';
-});
-
-
-
-
-
 return $app;

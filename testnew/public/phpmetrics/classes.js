@@ -51,7 +51,7 @@ var classes = [
         "violations": {}
     },
     {
-        "name": "App\\Services\\ClientService",
+        "name": "App\\Services\\CustomerService",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -92,13 +92,13 @@ var classes = [
         "ccnMethodMax": 1,
         "externals": [
             "Raiadrogasil\\Common\\Service\\BaseService",
-            "App\\Services\\ClientServiceInterface",
-            "App\\Repositories\\ClientRepositoryInterface",
+            "App\\Services\\CustomerServiceInterface",
+            "App\\Repositories\\CustomerRepositoryInterface",
             "Raiadrogasil\\Common\\DTO\\ReturnDTO",
-            "App\\Domain\\DTO\\ClientDTO",
+            "App\\Domain\\DTO\\CustomerDTO",
             "Illuminate\\Http\\Request",
             "Raiadrogasil\\Common\\DTO\\ReturnDTO",
-            "App\\Domain\\DTO\\ClientDTO",
+            "App\\Domain\\DTO\\CustomerDTO",
             "Illuminate\\Http\\Request"
         ],
         "parents": [
@@ -139,7 +139,7 @@ var classes = [
         "violations": {}
     },
     {
-        "name": "App\\Http\\API\\v0\\Controllers\\ClientController",
+        "name": "App\\Http\\API\\v1\\Controllers\\CustomerController",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -210,14 +210,14 @@ var classes = [
         "ccnMethodMax": 4,
         "externals": [
             "App\\Http\\Controllers\\Controller",
-            "App\\Services\\ClientServiceInterface",
-            "App\\Http\\API\\v0\\Resources\\ClientCollection",
-            "App\\Http\\API\\v0\\Resources\\ClientResource",
-            "App\\Http\\API\\v0\\Requests\\ClientRequest",
-            "App\\Http\\API\\v0\\Requests\\ClientRequest",
-            "App\\Http\\API\\v0\\Requests\\ClientRequest",
-            "App\\Http\\API\\v0\\Requests\\ClientRequest",
-            "App\\Http\\API\\v0\\Requests\\ClientRequest"
+            "App\\Services\\CustomerServiceInterface",
+            "App\\Http\\API\\v1\\Resources\\CustomerCollection",
+            "App\\Http\\API\\v1\\Resources\\CustomerResource",
+            "App\\Http\\API\\v1\\Requests\\CustomerRequest",
+            "App\\Http\\API\\v1\\Requests\\CustomerRequest",
+            "App\\Http\\API\\v1\\Requests\\CustomerRequest",
+            "App\\Http\\API\\v1\\Requests\\CustomerRequest",
+            "App\\Http\\API\\v1\\Requests\\CustomerRequest"
         ],
         "parents": [
             "App\\Http\\Controllers\\Controller"
@@ -236,12 +236,12 @@ var classes = [
         "number_operands": 75,
         "number_operators_unique": 5,
         "number_operands_unique": 12,
-        "cloc": 198,
-        "loc": 274,
+        "cloc": 208,
+        "loc": 284,
         "lloc": 76,
-        "mi": 87.81,
+        "mi": 87.92,
         "mIwoC": 39.42,
-        "commentWeight": 48.4,
+        "commentWeight": 48.51,
         "kanDefect": 0.29,
         "relativeStructuralComplexity": 169,
         "relativeDataComplexity": 0.6,
@@ -249,7 +249,7 @@ var classes = [
         "totalStructuralComplexity": 1352,
         "totalDataComplexity": 4.79,
         "totalSystemComplexity": 1356.79,
-        "package": "App\\Http\\API\\v0\\Controllers\\",
+        "package": "App\\Http\\API\\v1\\Controllers\\",
         "pageRank": 0.03,
         "afferentCoupling": 0,
         "efferentCoupling": 5,
@@ -257,7 +257,7 @@ var classes = [
         "violations": {}
     },
     {
-        "name": "App\\Http\\API\\v0\\Requests\\ClientRequest",
+        "name": "App\\Http\\API\\v1\\Requests\\CustomerRequest",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -295,31 +295,31 @@ var classes = [
         "ccnMethodMax": 1,
         "externals": [
             "Raiadrogasil\\Common\\Request\\BaseRequest",
-            "App\\Domain\\DTO\\ClientDTO",
-            "App\\Domain\\DTO\\ClientDTO"
+            "App\\Domain\\DTO\\CustomerDTO",
+            "App\\Domain\\DTO\\CustomerDTO"
         ],
         "parents": [
             "Raiadrogasil\\Common\\Request\\BaseRequest"
         ],
         "lcom": 2,
         "length": 38,
-        "vocabulary": 15,
-        "volume": 148.46,
-        "difficulty": 2.31,
-        "effort": 342.6,
-        "level": 0.43,
+        "vocabulary": 18,
+        "volume": 158.46,
+        "difficulty": 1.88,
+        "effort": 297.11,
+        "level": 0.53,
         "bugs": 0.05,
-        "time": 19,
-        "intelligentContent": 64.33,
+        "time": 17,
+        "intelligentContent": 84.51,
         "number_operators": 8,
         "number_operands": 30,
         "number_operators_unique": 2,
-        "number_operands_unique": 13,
+        "number_operands_unique": 16,
         "cloc": 19,
         "loc": 40,
         "lloc": 21,
-        "mi": 99.62,
-        "mIwoC": 55.82,
+        "mi": 99.42,
+        "mIwoC": 55.62,
         "commentWeight": 43.8,
         "kanDefect": 0.15,
         "relativeStructuralComplexity": 1,
@@ -328,7 +328,7 @@ var classes = [
         "totalStructuralComplexity": 3,
         "totalDataComplexity": 3,
         "totalSystemComplexity": 6,
-        "package": "App\\Http\\API\\v0\\Requests\\",
+        "package": "App\\Http\\API\\v1\\Requests\\",
         "pageRank": 0.08,
         "afferentCoupling": 1,
         "efferentCoupling": 2,
@@ -336,7 +336,7 @@ var classes = [
         "violations": {}
     },
     {
-        "name": "App\\Http\\API\\v0\\Resources\\ClientResource",
+        "name": "App\\Http\\API\\v1\\Resources\\CustomerResource",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -398,7 +398,7 @@ var classes = [
         "totalStructuralComplexity": 0,
         "totalDataComplexity": 4,
         "totalSystemComplexity": 4,
-        "package": "App\\Http\\API\\v0\\Resources\\",
+        "package": "App\\Http\\API\\v1\\Resources\\",
         "pageRank": 0.1,
         "afferentCoupling": 2,
         "efferentCoupling": 1,
@@ -406,7 +406,7 @@ var classes = [
         "violations": {}
     },
     {
-        "name": "App\\Http\\API\\v0\\Resources\\ClientCollection",
+        "name": "App\\Http\\API\\v1\\Resources\\CustomerCollection",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -437,7 +437,7 @@ var classes = [
         "ccnMethodMax": 1,
         "externals": [
             "Raiadrogasil\\Common\\Resource\\BaseCollection",
-            "App\\Http\\API\\v0\\Resources\\ClientResource"
+            "App\\Http\\API\\v1\\Resources\\CustomerResource"
         ],
         "parents": [
             "Raiadrogasil\\Common\\Resource\\BaseCollection"
@@ -469,7 +469,7 @@ var classes = [
         "totalStructuralComplexity": 18,
         "totalDataComplexity": 1.75,
         "totalSystemComplexity": 19.75,
-        "package": "App\\Http\\API\\v0\\Resources\\",
+        "package": "App\\Http\\API\\v1\\Resources\\",
         "pageRank": 0.04,
         "afferentCoupling": 1,
         "efferentCoupling": 2,
@@ -975,7 +975,7 @@ var classes = [
         "violations": {}
     },
     {
-        "name": "App\\Repositories\\ClientRepository",
+        "name": "App\\Repositories\\CustomerRepository",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -999,7 +999,7 @@ var classes = [
         "ccnMethodMax": 1,
         "externals": [
             "Raiadrogasil\\Common\\Repository\\BaseRepository",
-            "App\\Repositories\\ClientRepositoryInterface"
+            "App\\Repositories\\CustomerRepositoryInterface"
         ],
         "parents": [
             "Raiadrogasil\\Common\\Repository\\BaseRepository"
@@ -1039,7 +1039,7 @@ var classes = [
         "violations": {}
     },
     {
-        "name": "App\\Domain\\DTO\\ClientDTO",
+        "name": "App\\Domain\\DTO\\CustomerDTO",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -1153,7 +1153,7 @@ var classes = [
         "violations": {}
     },
     {
-        "name": "App\\Domain\\Entities\\Client",
+        "name": "App\\Domain\\Entities\\Customer",
         "interface": false,
         "abstract": false,
         "final": false,

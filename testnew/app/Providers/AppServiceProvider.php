@@ -14,13 +14,13 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind(
-            'App\Services\ClientServiceInterface',
-            'App\Services\ClientService'
+            'App\Services\CustomerServiceInterface',
+            'App\Services\CustomerService'
         );
 
         $this->app->bind(
-            'App\Repositories\ClientRepositoryInterface',
-            'App\Repositories\ClientRepository'
+            'App\Repositories\CustomerRepositoryInterface',
+            'App\Repositories\CustomerRepository'
         );
 
         $this->app->register(\Raiadrogasil\Common\ServiceProvider::class);

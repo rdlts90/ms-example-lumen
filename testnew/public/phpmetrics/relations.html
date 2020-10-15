@@ -50,7 +50,7 @@
 <div class="page">
     <div class="content content-first">
         <div class="report-details">
-            Created at 2020-10-14 13:31:58        , with PHPMetrics v2.7.4 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
+            Created at 2020-10-15 13:35:35        , with PHPMetrics v1.7.4 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
         </div>
 
         
@@ -254,14 +254,14 @@
         "relations": []
     },
     {
-        "name": "\\App\\Services\\ClientService",
+        "name": "\\App\\Services\\CustomerService",
         "size": 3000,
         "relations": [
             "\\Raiadrogasil\\Common\\Service\\BaseService",
-            "\\App\\Services\\ClientServiceInterface",
-            "\\App\\Repositories\\ClientRepositoryInterface",
+            "\\App\\Services\\CustomerServiceInterface",
+            "\\App\\Repositories\\CustomerRepositoryInterface",
             "\\Raiadrogasil\\Common\\DTO\\ReturnDTO",
-            "\\App\\Domain\\DTO\\ClientDTO",
+            "\\App\\Domain\\DTO\\CustomerDTO",
             "\\Illuminate\\Http\\Request"
         ]
     },
@@ -271,12 +271,12 @@
         "relations": []
     },
     {
-        "name": "\\App\\Services\\ClientServiceInterface",
+        "name": "\\App\\Services\\CustomerServiceInterface",
         "size": 3000,
         "relations": []
     },
     {
-        "name": "\\App\\Repositories\\ClientRepositoryInterface",
+        "name": "\\App\\Repositories\\CustomerRepositoryInterface",
         "size": 3000,
         "relations": []
     },
@@ -286,7 +286,7 @@
         "relations": []
     },
     {
-        "name": "\\App\\Domain\\DTO\\ClientDTO",
+        "name": "\\App\\Domain\\DTO\\CustomerDTO",
         "size": 3000,
         "relations": [
             "\\Raiadrogasil\\Common\\DTO\\BaseDTO",
@@ -299,14 +299,14 @@
         "relations": []
     },
     {
-        "name": "\\App\\Http\\API\\v0\\Controllers\\ClientController",
+        "name": "\\App\\Http\\API\\v1\\Controllers\\CustomerController",
         "size": 3000,
         "relations": [
             "\\App\\Http\\Controllers\\Controller",
-            "\\App\\Services\\ClientServiceInterface",
-            "\\App\\Http\\API\\v0\\Resources\\ClientCollection",
-            "\\App\\Http\\API\\v0\\Resources\\ClientResource",
-            "\\App\\Http\\API\\v0\\Requests\\ClientRequest"
+            "\\App\\Services\\CustomerServiceInterface",
+            "\\App\\Http\\API\\v1\\Resources\\CustomerCollection",
+            "\\App\\Http\\API\\v1\\Resources\\CustomerResource",
+            "\\App\\Http\\API\\v1\\Requests\\CustomerRequest"
         ]
     },
     {
@@ -317,24 +317,24 @@
         ]
     },
     {
-        "name": "\\App\\Http\\API\\v0\\Resources\\ClientCollection",
+        "name": "\\App\\Http\\API\\v1\\Resources\\CustomerCollection",
         "size": 3000,
         "relations": [
             "\\Raiadrogasil\\Common\\Resource\\BaseCollection",
-            "\\App\\Http\\API\\v0\\Resources\\ClientResource"
+            "\\App\\Http\\API\\v1\\Resources\\CustomerResource"
         ]
     },
     {
-        "name": "\\App\\Http\\API\\v0\\Resources\\ClientResource",
+        "name": "\\App\\Http\\API\\v1\\Resources\\CustomerResource",
         "size": 3000,
         "relations": []
     },
     {
-        "name": "\\App\\Http\\API\\v0\\Requests\\ClientRequest",
+        "name": "\\App\\Http\\API\\v1\\Requests\\CustomerRequest",
         "size": 3000,
         "relations": [
             "\\Raiadrogasil\\Common\\Request\\BaseRequest",
-            "\\App\\Domain\\DTO\\ClientDTO"
+            "\\App\\Domain\\DTO\\CustomerDTO"
         ]
     },
     {
@@ -454,11 +454,11 @@
         "relations": []
     },
     {
-        "name": "\\App\\Repositories\\ClientRepository",
+        "name": "\\App\\Repositories\\CustomerRepository",
         "size": 3000,
         "relations": [
             "\\Raiadrogasil\\Common\\Repository\\BaseRepository",
-            "\\App\\Repositories\\ClientRepositoryInterface"
+            "\\App\\Repositories\\CustomerRepositoryInterface"
         ]
     },
     {
@@ -477,7 +477,7 @@
         "relations": []
     },
     {
-        "name": "\\App\\Domain\\Entities\\Client",
+        "name": "\\App\\Domain\\Entities\\Customer",
         "size": 3000,
         "relations": [
             "\\Raiadrogasil\\Common\\Entity\\BaseEntity"
