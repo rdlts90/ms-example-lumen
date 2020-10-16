@@ -18,7 +18,7 @@ class CustomerRequest extends BaseRequest
         //executar a validacao
         $rule = [
             'name' => 'required|max:50',
-            'email' => 'required|unique:customer|max:50',
+            'email' => 'required|unique:customer|max:50|email',
             'cpf' => 'required|cpf',
             'cep' => 'required|zipcode',
         ];

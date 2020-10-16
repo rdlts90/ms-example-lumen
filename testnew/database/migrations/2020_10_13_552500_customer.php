@@ -19,8 +19,8 @@ class Customer extends Migration
             Schema::connection($this->typeConnection)->create('customer', function (Blueprint $table) {
                 $table->bigIncrements('id');
                 $table->string('name');
-                $table->string('email');
-                $table->integer('cpf');
+                $table->string('email')->unique();
+                $table->unsignedBigInteger('cpf');
                 $table->integer('cep');
                 $table->timestamps();
                 $table->softDeletes();
