@@ -259,13 +259,13 @@ class CustomerController extends Controller
             throw $e;
         }
 
-        $config = null;
+        $customer = null;
         if (!empty($dataCustomer)) {
-            $config = $this->collection($dataCustomer)
+            $customer = $this->collection($dataCustomer)
                 ->configureMainParser();
         }
 
-        return $this->response($config);
+        return $this->response($customer);
     }
 
     /**
@@ -430,13 +430,13 @@ class CustomerController extends Controller
             throw $e;
         }
 
-        $config = null;
+        $customer = null;
         if (!empty($dataCustomer)  && $dataCustomer->count()) {
-            $config = $this->resource($dataCustomer)
+            $customer = $this->resource($dataCustomer)
                 ->configureMainParser();
         }
 
-        return $this->response($config);
+        return $this->response($customer);
     }
 
     /**
